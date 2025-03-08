@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{CurrentLang.IsoLang}}" culture="{{CurrentLang.CultureLang}}">
+<head>
+    <title>{{ResourcesTemplate.CGV2}} - {{CustomTitle}} - {{City}} - {{Country}}</title>
+    <meta name="description" content="{{ResourcesTemplate.TosDescription}}">
+    {{>CommonMetaTags}}
+    <link rel="canonical" href="{{UrlTermsOfSales}}" />
+    <meta property="og:url" content="{{UrlTermsOfSales}}" />
+    <meta property="og:title" content="{{ResourcesTemplate.CGV2}}" />
+    <meta property="og:image" content="{{#Photos.0}}{{UrlMedias}}/crop-300x200/{{IdMedia}}/{{FileNamePhoto}}{{/Photos.0}}" />
+    <meta property="og:description" content="{{ResourcesTemplate.TosDescription}}" />
+    {{>FaviconTags}}
+    {{>CommonStylesheets}}
+</head>
+
+<body>
+    {{{ScriptAnalytics}}}
+    {{{GoogleTagManagerBody}}}
+    {{>Header}}
+
+    <main>
+        <!-- SECTION BANNER -->
+        <section class="section section-title-BG">
+            <div class="content-section">
+                <div class="bg-img" style="background-image: url({{#Photos.0}}{{UrlMedias}}/crop-1600x500/{{IdMedia}}/{{FileNamePhoto}}{{/Photos.0}})" alt="{{NamePhoto}}">
+                    <div class="opacity">
+                        <h1 class="big-title">{{ResourcesTemplate.CGV2}}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION TERMS OF SALES -->
+        <section class="section">
+            <div class="content-section">
+                {{{CGV}}}
+            </div>
+        </section>
+    </main>
+
+    {{>Footer}}
+    {{>CommonScripts}}
+    
+</body>
+</html>
